@@ -9,7 +9,7 @@ if ( process.argv.length<3 ) {
 
 const password = process.argv[2]
 
-const url = 'mongodb+srv://fullstack-phb:71067451@cluster0.xws2u.mongodb.net/phonebook-app?retryWrites=true&w=majority'
+const url = process.env.MONGODB_URI
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
 
